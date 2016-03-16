@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  bundle:
+    image: busybox
+    volumes:
+      - ./bundler_cache/hello:/bundler_cache
+
+  hello:
+    build: ./hello
+    ports:
+      - 4567:4567
+    volumes:
+      - ./hello/src:/app
+    volumes_from:
+      - bundle
