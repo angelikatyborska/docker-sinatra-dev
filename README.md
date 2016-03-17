@@ -2,7 +2,7 @@
 
 ## :)
 - Reloads the app without restarting the container.
-- Keeps Bundler's cache on a volume, so that it's persisted when the container is removed, it means faster `bundle install`.
+- Keeps Bundler's cache on a volume, so that it's persisted when the container is removed, it means faster `bundle install` (if a new gem is added, only this gem gets installed, not all of them all over).
 
 ## :(
 - Adding/removing gems still requires container restart.
